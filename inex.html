@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGRO FORTE • Futuro Verde</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Playfair+Display:wght@700&amp;display=swap');
+        
+        :root {
+            --green: #166534;
+            --light-green: #4ade80;
+        }
+        
+        .hero-bg {
+            background: linear-gradient(rgba(22, 101, 52, 0.75), rgba(22, 101, 52, 0.85)), 
+                        url('https://picsum.photos/id/1015/2000/1200') center/cover no-repeat;
+        }
+        
+        .leaf {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-25px); }
+        }
+        
+        .section-title {
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(to right, #4ade80, #166534);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .card-hover {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-15px) scale(1.03);
+            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.4);
+        }
+        
+        .soil-bg {
+            background: linear-gradient(#166534, #052e16);
+        }
+    </style>
+</head>
+<body class="bg-emerald-950 text-emerald-50 font-sans overflow-x-hidden">
+    <!-- NAVBAR -->
+    <nav class="fixed top-0 w-full bg-emerald-950/90 backdrop-blur-md z-50 border-b border-emerald-800">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-emerald-500 rounded-2xl flex items-center justify-center text-2xl">🌱</div>
+                <div>
+                    <span class="text-2xl font-bold tracking-tighter">AGRO</span>
+                    <span class="text-emerald-400 text-2xl font-bold tracking-tighter">FORTE</span>
+                </div>
+            </div>
+            
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="#sobre" class="hover:text-emerald-400 transition-colors">Sobre</a>
+                <a href="#praticas" class="hover:text-emerald-400 transition-colors">Práticas</a>
+                <a href="#impacto" class="hover:text-emerald-400 transition-colors">Impacto</a>
+                <a href="#futuro" class="hover:text-emerald-400 transition-colors">O Futuro</a>
+            </div>
+            
+            <button onclick="document.getElementById('contato').scrollIntoView({behavior:'smooth'})" 
+                    class="px-6 py-3 bg-emerald-500 hover:bg-emerald-400 transition-colors rounded-2xl font-semibold text-sm flex items-center gap-2">
+                <i class="fas fa-seedling"></i>
+                <span>FAZER PARTE</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero-bg min-h-screen flex items-center relative">
+        <div class="max-w-5xl mx-auto px-6 text-center pt-20">
+            <div class="inline-flex items-center gap-2 bg-emerald-900/70 backdrop-blur-md px-6 py-2 rounded-full mb-8 border border-emerald-700">
+                <div class="w-3 h-3 bg-emerald-400 rounded-full animate-pulse"></div>
+                <span class="text-sm font-medium tracking-widest">EQUILÍBRIO • PRODUÇÃO • FUTURO</span>
+            </div>
+            
+            <h1 class="text-7xl md:text-8xl font-bold leading-none tracking-tighter mb-6">
+                AGRO FORTE<br>
+                <span class="text-emerald-400">O FUTURO É VERDE</span>
+            </h1>
+            
+            <p class="max-w-2xl mx-auto text-xl md:text-2xl text-emerald-100 mb-12">
+                Cultivamos com força, respeitamos com sabedoria.<br>
+                Produção alta. Impacto baixo. Terra viva.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                <button onclick="document.getElementById('praticas').scrollIntoView({behavior:'smooth'})" 
+                        class="px-10 py-5 bg-white text-emerald-950 font-semibold rounded-3xl text-lg hover:scale-105 transition-all flex items-center justify-center gap-3 group">
+                    CONHEÇA AS PRÁTICAS
+                    <span class="group-active:rotate-45 transition-transform">→</span>
+                </button>
+                
+                <button onclick="document.getElementById('futuro').scrollIntoView({behavior:'smooth'})" 
+                        class="px-10 py-5 border-2 border-emerald-400 font-semibold rounded-3xl text-lg hover:bg-emerald-400/10 transition-all">
+                    VISUALIZAR 2040
+                </button>
+            </div>
+            
+            <!-- Leaf decorations -->
+            <div class="absolute bottom-12 left-10 text-6xl leaf opacity-30">🍃</div>
+            <div class="absolute bottom-32 right-16 text-5xl leaf opacity-30" style="animation-delay: 2s;">🌿</div>
+        </div>
+        
+        <div class="absolute bottom-10 left-1/2 flex flex-col items-center">
+            <div class="text-xs tracking-widest mb-2">ROLE PARA EXPLORAR</div>
+            <div class="w-6 h-10 border-2 border-emerald-400 rounded-full flex items-center justify-center">
+                <div class="w-1 h-3 bg-emerald-400 rounded-full animate-bounce"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre" class="py-24 bg-emerald-900">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="section-title text-5xl font-bold mb-8">O equilíbrio que alimenta o mundo</h2>
+                    <p class="text-lg text-emerald-100 mb-8">
+                        A <span class="font-semibold text-emerald-400">Agro Forte</span> nasceu da urgência de produzir mais, 
+                        sem destruir o que nos sustenta. Somos produtores, cientistas e sonhadores que acreditam que o futuro 
+                        da agricultura está na harmonia entre tecnologia de ponta e sabedoria ancestral.
+                    </p>
+                    <div class="flex items-center gap-8">
+                        <div>
+                            <div class="text-4xl font-bold text-emerald-400">+87%</div>
+                            <div class="text-sm text-emerald-300">PRODUTIVIDADE</div>
+                        </div>
+                        <div>
+                            <div class="text-4xl font-bold text-emerald-400">-64%</div>
+                            <div class="text-sm text-emerald-300">EMISSÕES</div>
+                        </div>
+                        <div>
+                            <div class="text-4xl font-bold text-emerald-400">100%</div>
+                            <div class="text-sm text-emerald-300">REGENERAÇÃO</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <img src="https://picsum.photos/id/1016/800/600" alt="Fazenda sustentável" 
+                         class="rounded-3xl shadow-2xl">
+                    <div class="absolute -bottom-6 -left-6 bg-emerald-800 p-6 rounded-3xl shadow-xl border border-emerald-700">
+                        <div class="flex items-center gap-4">
+                            <i class="fas fa-leaf text-4xl text-emerald-400"></i>
+                            <div>
+                                <div class="font-semibold">Solo vivo</div>
+                                <div class="text-emerald-300 text-sm">Microorganismos + tecnologia</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRÁTICAS -->
+    <section id="praticas" class="py-24 soil-bg">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="px-4 py-2 bg-emerald-700 text-emerald-300 rounded-full text-sm font-medium">INOVAÇÃO + TRADIÇÃO</span>
+                <h2 class="text-5xl font-bold mt-6">Práticas que transformam</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-emerald-950 rounded-3xl p-8 card-hover border border-emerald-800">
+                    <div class="text-6xl mb-6">🌾</div>
+                    <h3 class="text-2xl font-semibold mb-4">Agricultura de Precisão</h3>
+                    <p class="text-emerald-300 mb-6">Drones, sensores IoT e IA monitoram cada metro quadrado. Irrigação inteligente reduz desperdício em até 70%.</p>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Mapeamento de solo em tempo real</li>
+                        <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Previsão de pragas por IA</li>
+                        <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Colheita robótica</li>
+                    </ul>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="bg-emerald-950 rounded-3xl p-8 card-hover border border-emerald-800">
+                    <div class="text-6xl mb-6">🌳</div>
+                    <h3 class="text-2xl font-semibold mb-4">Agrofloresta Regenerativa</h3>
+                    <p class="text-emerald-300 mb-6">Combinamos árvores nativas, culturas e pecuária em um único sistema que restaura o solo e captura carbono.</p>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Biodiversidade +20x</li>
+                        <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Solo mais fértil a cada ciclo</li>
+                        <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Resiliência climática</li>
+                    </ul>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="bg-emerald-950 rounded-3xl p-8 card-hover border border-emerald-800">
+                    <div class="text-6xl mb-6">⚡</div>
+                    <h3 class="text-2xl font-semibold mb-4">Energia Limpa no Campo</h3>
+                    <p class="text-emerald-300 mb-6">Painéis solares, biodigestores e eólica geram a própria energia da fazenda. Zero dependência de combustíveis fósseis.</p>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Energia 100% renovável</li>
+                        <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Biofertilizantes naturais</li>
+                        <li class="flex items-center gap-2"><span class="text-emerald-400">✓</span> Economia circular</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- IMPACTO -->
+    <section id="impacto" class="py-24 bg-emerald-900">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid md:grid-cols-12 gap-10 items-center">
+                <div class="md:col-span-5">
+                    <h2 class="text-5xl font-bold mb-10">Resultados que falam por si</h2>
+                    
+                    <div class="space-y-12">
+                        <div class="flex gap-6">
+                            <div class="text-7xl font-black text-emerald-400/30">01</div>
+                            <div>
+                                <h3 class="text-3xl font-semibold mb-2">Carbono Negativo</h3>
+                                <p class="text-emerald-300">Nossas fazendas capturam mais CO₂ do que emitem. Cada hectare devolve vida ao planeta.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6">
+                            <div class="text-7xl font-black text-emerald-400/30">02</div>
+                            <div>
+                                <h3 class="text-3xl font-semibold mb-2">Comunidades Fortes</h3>
+                                <p class="text-emerald-300">Treinamos 12.400 famílias. Geração de renda digna no campo.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6">
+                            <div class="text-7xl font-black text-emerald-400/30">03</div>
+                            <div>
+                                <h3 class="text-3xl font-semibold mb-2">Alimento do Futuro</h3>
+                                <p class="text-emerald-300">Nutrição superior com traçabilidade total via blockchain.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:col-span-7">
+                    <div class="bg-emerald-950/70 p-10 rounded-3xl border border-emerald-700">
+                        <div class="grid grid-cols-2 gap-8">
+                            <div class="space-y-8">
+                                <div class="h-2 bg-gradient-to-r from-emerald-400 to-transparent rounded"></div>
+                                <div>
+                                    <div class="text-emerald-400 text-sm">FAZENDAS ATIVAS</div>
+                                    <div class="text-6xl font-bold">47</div>
+                                </div>
+                                <div>
+                                    <div class="text-emerald-400 text-sm">HECTARES REGENERADOS</div>
+                                    <div class="text-6xl font-bold">8.940</div>
+                                </div>
+                            </div>
+                            <div class="relative">
+                                <img src="https://picsum.photos
